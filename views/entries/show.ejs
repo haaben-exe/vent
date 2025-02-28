@@ -1,0 +1,40 @@
+<!-- views/applications/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= entry.title %>
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+        <h1>
+            <%= entry.title %>
+        </h1>
+        <% if (entry.text) { %>
+            <p>Entry: <%= entry.text %>
+            </p>
+            <% } %>
+        <% if (entry.name) { %>
+            <p>Name: <%= entry.name %>
+            </p>
+            <% } %>
+        <% if (entry.date) { %>
+            <p>Date: <%= entry.date %>
+            </p>
+            <% } %>
+        <a href="/users/<%= user._id %>/entries/<%= entry._id %>/edit">
+            Edit this Entry
+        </a>
+
+            <form action="/users/<%= user._id %>/entries/<%= entry._id %>?_method=DELETE" method="POST">
+
+            <button type="submit">Delete this entry</button>
+</body>
+
+</html>

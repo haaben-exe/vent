@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Entry</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Entry</h1>
+    <!-- views/applications/new.ejs -->
+
+<form action="/users/<%= user._id %>/entries" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" />
+
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title" />
+
+  <label for="date">Date:</label>
+  <input type="datetime-local" name="date" id="date" />
+
+  <label for="entry">Entry:</label>
+  <textarea name="text" id="text"></textarea>
+
+  <button type="submit">Add Entry</button>
+
+</form>
+
+  </body>
+</html>

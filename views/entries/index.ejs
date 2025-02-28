@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vent</title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+        <h1>Entries/index page</h1>
+        <a href='/users/<%= user._id%>/entries/new %>'>Add a New Entry</a>
+        <ul>
+            <% entries.forEach((entry)=> { %>
+                <a href="/users/<%=user._id%>/entries/<%=entry._id%>">
+                    <li>
+                        <%= entry.title %>
+                    </li>
+                </a>
+                <ul>
+                    <li>
+                        <%=entry.name%>
+                    </li>
+                    <li>
+                        <%=entry.date%>
+                    </li>
+                </ul>
+                <% }) %>
+        </ul>
+</body>
+
+</html>

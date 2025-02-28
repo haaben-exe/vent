@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing <%=entry.title%></title>
+</head>
+<body>
+    <h1>Edit <%=entry.title%></h1>
+    <form
+  action="/users/<%= user._id %>/entries/<%= entry._id %>?_method=PUT"
+  method="POST">
+    <input
+  type="text"
+  name="name"
+  id="name"
+  value="<%= entry.name %>"
+/>
+<input
+  type="text"
+  name="title"
+  id="title"
+  value="<%= entry.title %>"
+/>
+<input
+  type="datetime-local"
+  name="date"
+  id="date"
+  value="<%= entry.date %>"
+/>
+<input
+  type="text"
+  name="text"
+  id="text"
+  value="<%= entry.text %>"
+/>
+
+<button type="submit">Update Application</button>
+</form>
+</body>
+</html>
