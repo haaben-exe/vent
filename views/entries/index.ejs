@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Vent</title>
 </head>
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <h1>Entries/index page</h1>
-        <a href='/users/<%= user._id%>/entries/new %>'>Add a New Entry</a>
+    <div class="all-entries-body">
+        <div class="all-entries-header">
+        <h1>Journal Entries</h1>
+        <a class="add-entry-link" href='/users/<%= user._id%>/entries/new %>'>Add a New Entry</a>
+        </div>
+        <div class="read-entry-button">
         <ul>
             <% entries.forEach((entry)=> { %>
                 <a href="/users/<%=user._id%>/entries/<%=entry._id%>">
@@ -18,16 +23,9 @@
                         <%= entry.title %>
                     </li>
                 </a>
-                <ul>
-                    <li>
-                        <%=entry.name%>
-                    </li>
-                    <li>
-                        <%=entry.date%>
-                    </li>
-                </ul>
                 <% }) %>
         </ul>
+        </div>
 </body>
 
 </html>

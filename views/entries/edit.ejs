@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Editing <%=entry.title%></title>
 </head>
 <body>
+  <div class="edit-body">
     <h1>Edit <%=entry.title%></h1>
     <form
   action="/users/<%= user._id %>/entries/<%= entry._id %>?_method=PUT"
@@ -37,5 +39,6 @@
 
 <button type="submit">Update Application</button>
 </form>
+</div>
 </body>
 </html>

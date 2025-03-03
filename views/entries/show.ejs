@@ -1,21 +1,23 @@
-<!-- views/applications/show.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
+    <link rel="stylesheet" href="/stylesheets/show.css" />    <title>
         <%= entry.title %>
     </title>
 </head>
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="show-body">
+    <div class="show-header">
         <h1>
             <%= entry.title %>
         </h1>
+        <div class="show-sidebar">
+            <div class="show-actions">
         <% if (entry.text) { %>
             <p>Entry: <%= entry.text %>
             </p>
@@ -35,6 +37,11 @@
             <form action="/users/<%= user._id %>/entries/<%= entry._id %>?_method=DELETE" method="POST">
 
             <button type="submit">Delete this entry</button>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
 </body>
 
 </html>

@@ -1,0 +1,124 @@
+/* public/stylesheets/show.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #05544b;
+  height: 100vh;
+  width: 50vw;
+  padding: 0px 300px;
+}
+
+.show-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #042622;
+  border-radius: 20px;
+
+}
+
+.show-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.show-header > h1 {
+  color: #d9d9d9;
+  font-size: 3.4em;
+  margin-left: 10px;
+}
+
+.show-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0 30px;
+}
+
+button {
+  padding: 8px 10px;
+  background-color: #ce4866;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  width: 10em;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #e84a6c;
+}
+
+.show-actions > a {
+  background-color: #4b598e;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 10px;
+  border-radius: 30px;
+  width: 10em;
+  text-align: center;
+  margin: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.show-actions > a:hover {
+  background-color: #1c2e5b;
+}
+
+p {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 10px 30px;
+  text-align: center;
+}
+
+.show-notes-container {
+  width: 90%;
+  margin: 20px 0;
+}
+
+.show-notes-container > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4em;
+  margin: 20px;
+}
+
+.show-notes-container > a:hover {
+  color: #4b598e;
+}
+
+.show-notes {
+  background-color: #f6e7e7;
+  width: 85%;
+  border-radius: 20px;
+  padding: 40px 40px 20px 40px;
+  margin: 20px 10px;
+}
+
+h2 {
+  margin: 0 10px;
+  color: #1c2e5b;
+}
+
+.show-notes > p {
+  font-weight: normal;
+  color: #1c2e5b;
+  text-align: left;
+  font-size: 1.2em;
+}

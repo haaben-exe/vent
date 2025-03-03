@@ -4,23 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>Vent</title>
 </head>
 
 <body>
   <%- include('./partials/_navbar.ejs') %>
+  <div class="text-container"
+  <div class="index-container">
     <% if (user) { %>
-      <h1>Welcome to the app, <%= user.username %>!</h1>
+      <h1 class="main-header">Welcome to the app, <%= user.username %>!</h1>
       <p>
         <a href="/auth/sign-out">Sign out</a>
       </p>
       <% } else { %>
-        <h1>Express Extensively</h1>
+        <h1 class="logo">Vent</h1>
+        <h5 class="subheader">Express Extensively</h5>
         <p>
-          <a href="/auth/sign-up">Sign up</a> or
-          <a href="/auth/sign-in">Sign in</a>.
+        <div class="auth-links">
+          <a class="signup-link" href="/auth/sign-up">Sign up</a> or
+          <a class="signin-link" href="/auth/sign-in">Sign in</a>
         </p>
         <% } %>
+      </div>
+      </div>
 </body>
 
 </html>
